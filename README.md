@@ -1,2 +1,61 @@
-# worms_on_paper
-Flexible and disposable paper and plastic-based gel micropads for nematode handling, imaging and chemical testing
+**Worms(Nematodes) on Paper**
+
+This software is written for our paper
+<i>"Flexible and disposable paper and plastic-based gel micropads for nematode handling, imaging and chemical testing"</i>
+
+Requirments
+===========
+
+*Environment Setup*
+
+-   Download & Install [Matlab R2016a]
+-   Install Image Processing Toolbox
+
+It was tested on Windows and Mac OS X.
+
+Usage
+=====
+
+Run uPAD_tracker_plastic.m to get started
+
+Steps involved
+==============
+This script loads the video file selected by the user and performs 
+following operations:
+
+        1)  Creates a video file for adding tracking information to the
+             original video.
+        2)  Using a Circular Hough Transform (CHT), it selects the
+            circular uPADs in the frames.
+        3)  Applies an Active Contour algorithm on the detected uPADs to
+            refine the edges and handles worm detection even when they 
+            are touching the edges of uPADs.
+        4)  Removes the background from the frame by applying a local
+            thresholding technique with a window size of 100x100 and a
+            threshold value of 90%.
+        5)  Identifies worms by characterization parameters for L4-stage
+            C. elegans and writes the centroid information to separate 
+            excel files.
+        6)  Repeats steps 2-5 for every frame.
+        7)  Saves the tracking video and excel files.
+
+
+License
+=======
+
+This code is GNU GENERAL PUBLIC LICENSED.
+
+
+Acknowledgements
+================
+meanthresh.m is written by Jan Motl and can be found at [meanthresh] 
+
+Contributing
+============
+
+If you have any suggestions or identified bugs please feel free to post
+them!
+
+  [Matlab]: https://www.mathworks.com/downloads/
+  [image]: Images/snapshot_of_a_block.PNG
+  [meanthresh]: https://www.mathworks.com/matlabcentral/fileexchange/41787-meanthresh-local-image-thresholding?focused=3783566&tab=function 
