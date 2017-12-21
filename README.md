@@ -1,4 +1,4 @@
-**Worms(Nematodes) on Paper**
+# Software to track worms *(C. Elegans)* on Paper and analyse their behavior at different drug concentrations
 
 This software is written for our paper in *APL Bioengineering*:
 *"Flexible and disposable paper and plastic-based gel micropads for nematode handling, imaging and chemical testing"*
